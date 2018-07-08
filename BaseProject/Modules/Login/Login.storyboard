@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+        <array key="SourceSansPro-Regular.otf">
+            <string>SourceSansPro-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="dHw-mc-Pag">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" title="Login View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mYp-LM-V15" customClass="LoginViewController" customModule="BaseProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="N51-eV-21v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_login_bg" translatesAutoresizingMaskIntoConstraints="NO" id="deg-bg-SIm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7j-TN-9Gm">
+                                <rect key="frame" x="20" y="627" width="335" height="185"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLk-yN-i60">
+                                        <rect key="frame" x="110.33333333333334" y="40" width="114" height="46"/>
+                                        <color key="backgroundColor" red="0.23921568630000001" green="0.33725490200000002" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="CIo-ci-22N"/>
+                                            <constraint firstAttribute="width" constant="114" id="MR5-SK-5Kr"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.23921568630000001" green="0.33725490200000002" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="facebook-white">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbq-Jw-Dc8">
+                                        <rect key="frame" x="110.33333333333334" y="96" width="114" height="26"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                        <state key="normal" title="BROWSE AS GUEST">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whX-2j-38s">
+                                        <rect key="frame" x="40" y="138" width="116" height="25"/>
+                                        <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="11"/>
+                                        <state key="normal" title="Forgot Password, Help!">
+                                            <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1F-eQ-TdW">
+                                        <rect key="frame" x="199" y="138" width="96" height="25"/>
+                                        <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="11"/>
+                                        <state key="normal" title="New here? Sign Up">
+                                            <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="S1F-eQ-TdW" secondAttribute="bottom" constant="22" id="2sH-qK-Ck3"/>
+                                    <constraint firstItem="sbq-Jw-Dc8" firstAttribute="trailing" secondItem="dLk-yN-i60" secondAttribute="trailing" id="4Es-bb-jeh"/>
+                                    <constraint firstItem="dLk-yN-i60" firstAttribute="top" secondItem="o7j-TN-9Gm" secondAttribute="top" constant="40" id="7vE-mf-MQ7"/>
+                                    <constraint firstItem="sbq-Jw-Dc8" firstAttribute="leading" secondItem="dLk-yN-i60" secondAttribute="leading" id="Kgx-Ay-GLD"/>
+                                    <constraint firstItem="whX-2j-38s" firstAttribute="leading" secondItem="o7j-TN-9Gm" secondAttribute="leading" constant="40" id="MVG-Ga-Jx2"/>
+                                    <constraint firstAttribute="height" constant="185" id="QkM-ea-fUb"/>
+                                    <constraint firstItem="dLk-yN-i60" firstAttribute="centerX" secondItem="o7j-TN-9Gm" secondAttribute="centerX" id="Sa9-fR-57m"/>
+                                    <constraint firstItem="S1F-eQ-TdW" firstAttribute="top" secondItem="sbq-Jw-Dc8" secondAttribute="bottom" constant="16" id="Xbs-ZO-TZo"/>
+                                    <constraint firstAttribute="trailing" secondItem="S1F-eQ-TdW" secondAttribute="trailing" constant="40" id="bPj-o1-Aai"/>
+                                    <constraint firstItem="whX-2j-38s" firstAttribute="baseline" secondItem="S1F-eQ-TdW" secondAttribute="baseline" id="dFr-fE-9gd"/>
+                                    <constraint firstItem="sbq-Jw-Dc8" firstAttribute="top" secondItem="dLk-yN-i60" secondAttribute="bottom" constant="10" id="flo-2v-ou1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="o7j-TN-9Gm" firstAttribute="leading" secondItem="eTk-gV-bpX" secondAttribute="leading" constant="20" id="5BI-ic-6TC"/>
+                            <constraint firstAttribute="bottom" secondItem="o7j-TN-9Gm" secondAttribute="bottom" id="A6j-QW-uLE"/>
+                            <constraint firstItem="eTk-gV-bpX" firstAttribute="trailing" secondItem="o7j-TN-9Gm" secondAttribute="trailing" constant="20" id="B4T-MP-h3a"/>
+                            <constraint firstItem="deg-bg-SIm" firstAttribute="leading" secondItem="eTk-gV-bpX" secondAttribute="leading" id="FMc-8V-ulO"/>
+                            <constraint firstAttribute="top" secondItem="deg-bg-SIm" secondAttribute="top" id="JzJ-tm-nhv"/>
+                            <constraint firstItem="deg-bg-SIm" firstAttribute="trailing" secondItem="eTk-gV-bpX" secondAttribute="trailing" id="oVS-Ql-hyD"/>
+                            <constraint firstAttribute="bottom" secondItem="deg-bg-SIm" secondAttribute="bottom" id="tOt-cB-0gg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eTk-gV-bpX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Moe-FQ-MnX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1397.5999999999999" y="173.16341829085459"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="facebook-white" width="22" height="22"/>
+        <image name="user_login_bg" width="800" height="1200"/>
+    </resources>
+</document>
