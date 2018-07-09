@@ -51,14 +51,6 @@ class DefaultClientManager {
     }
 }
 
-class UserClientManager: DefaultClientManager {
-    override func buildHeaders() -> [String: String] {
-        var dictionary = super.buildHeaders();
-        dictionary["test"] = "test"
-        return dictionary
-    }
-}
-
 extension DefaultClientManager: ClientManagerProtocol {
     func get<D: Decodable>(_ responseType: D.Type, endpoint: String, params: [String: String]?,
                            completion: @escaping (D?, URLResponse?, Error?) -> Void) {
@@ -93,22 +85,15 @@ extension DefaultClientManager: ClientManagerProtocol {
     func performRequest<D: Decodable>(_ responseType: D.Type, request: URLRequest,
                                       completion: @escaping (D?, URLResponse?, Error?) -> Void) {
         self.session.dataTask(with: request) { (data, response, error) in
-            if error != nil || data == nil {
+            if error != nil {
                 completion(nil, response, error)
             } else {
-                guard let responseData = data else {
-                    completion(nil, response, error)
-                    return
-                }
-                guard error == nil else {
-                    completion(nil, response, error!)
-                    return
-                }
                 let decoder = JSONDecoder()
                 do {
-                    let result = try decoder.decode(D.self, from: responseData)
+                    let result = try decoder.decode(D.self, from: data!)
                     completion(result, response, nil)
                 } catch {
+                    debugPrint("Decode error: \(error)")
                     completion(nil, response, error)
                 }
             }
