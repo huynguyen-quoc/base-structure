@@ -2,7 +2,7 @@
 //  BaseProjectUITests.swift
 //  BaseProjectUITests
 //
-//  Created by Nguyen Quoc Huy on 7/7/18.
+//  Created by Nguyen Quoc Huy on 7/9/18.
 //  Copyright © 2018 Nguyen Quoc Huy. All rights reserved.
 //
 

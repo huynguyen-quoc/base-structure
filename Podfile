@@ -6,7 +6,7 @@ target 'BaseProject' do
   use_frameworks!
   # Pods for BaseProject
   pod 'XLPagerTabStrip'
-  pod 'TRON'
+  pod 'DeviceGuru'
   pod 'IQKeyboardManagerSwift'
   pod 'PhotoEditorSDK', '~> 8.2.4'
   pod 'PMAlertController'
